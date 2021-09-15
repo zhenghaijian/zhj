@@ -13,19 +13,36 @@
 		html{
 		height: 100%;
 			}
-		@keyframes my{
-		from{opacity: 0;}	to{opacity: 100}
-		}
-		h1{
-		animation: my 1s infinite;
-		}
+				@keyframes fist{
+				0%{opacity: 0%;}
+				25%{opacity: 100%;}
+				50%{opacity: 0%;}
+				100%{opacity: 0%;}
+			}
+			@keyframes second{
+				0%{opacity: 0%;}
+				50%{opacity: 0%;}
+				75%{opacity: 100%;}
+				100%{opacity: 0%;}
+			}
+			p{
+				font-size: 100px;
+				position: absolute;
+				width: 100%;
+				text-align: center;
+			}
+			#fist{
+				animation: fist 5s infinite;
+			}
+			#second{
+				animation: second 5s infinite;
+			}
 		</style>
 
 	</head>
 	<body>
-		<audio src="./music/mm.wav" controls="controls" autoplay="autoplay">
-	        <h1>我是大</h1>
-		<p>w1</p>
-		<p>dsaw</p>
+		<audio src="./music/mm.wav"  autoplay="autoplay">
+	      	<p id="fist">A LITTLE PIG</p>
+		<p id="second">I LOVE YOU</p>
 	</body>
 </html>
