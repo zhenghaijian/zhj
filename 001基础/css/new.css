@@ -32,8 +32,16 @@ animation-timing-function: linear;
 animation: second 7s infinite;
 animation-timing-function: linear;
 	}
-page{
-font-size: 120px
+.page page{
+font-size: 120px;
+padding-left: 10px;
+	}
+.page page:nth-child(1){
+padding-left: 0;
+	}
+.page{
+padding-tp:30px ;
+text-align: center;
 	}
 @keyframes g1{
 0%{opacity: 0;}
