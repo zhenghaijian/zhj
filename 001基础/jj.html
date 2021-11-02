@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#emploveTable{
+				text-align: center;
+				margin: 30px auto;
+				border-collapse: collapse;
+				border:solid  1px black ;
+				width: 270px;
+			}
+			#formDiv{
+				text-align: center;
+				margin: 30px auto;
+				border: solid 1px black;
+				width: 270px;
+			}
+			#formDiv table{
+				margin: 5px auto;
+				}
+		</style>
+	</head>
+	<body>
+		<table id="emploveTable" border="1" >
+			<tr>
+			    <th>name</th>
+			    <th>email</th>
+			    <th>salary</th>
+			    <th>&nbsp;</th>
+			</tr>
+			<tr>
+				    <td>tom</td>
+				    <td>tom@tom.com</td>
+				    <td>5000</td>
+				    <td><a href="javascript:;">delete</a></td>
+			</tr>
+			<tr>
+				    <td>jerry</td>
+				    <td>jerry@jerry.com</td>
+				    <td>8000</td>
+				    <td><a href="javascript:;">delete</a></td>
+			</tr>
+			<tr>
+				    <td>bob</td>
+				    <td>bob@bob.com</td>
+				    <td>10000</td>
+				    <td><a href="javascript:;">delete</a></td>
+			</tr>
+		</table>
+		<div id="formDiv">
+			<h4>添加员工</h4>
+		<table>
+			<tr>
+			  	  <td class="word">name:</td>
+								<td class="inp">
+									<input type="text" name="empName" id="empName" />
+								</td>
+			</tr>
+			<tr>
+				     <td class="word">email:</td>
+									<td>
+										<input type="text" name="email" id="email" />
+									</td>
+			</tr>
+			<tr>
+				     <td class="word">salary:</td>
+									<td>
+										<input type="text" name="salary" id="salary" />
+									</td>
+			</tr>
+			<tr>
+				      <td colspan="2" align="center">
+											<button id="addEmpButton" value="abc">Sumbit</button>
+										</td>					
+			</tr>
+		</table>
+	</div>
+	</body>
+	<script type="text/javascript">
+		function delA(){
+		var tr=this.parentNode.parentNode;
+			// 删除员工的名字
+			// 1、
+			// var name=tr.getElementsByTagName("td")[0].innerHTML;
+			// 2、
+			var name=tr.children[0].innerHTML;
+			var flag=confirm("确认删除"+name+"吗?");
+			if(flag){
+				tr.parentNode.removeChild(tr);
+			}		
+			// return false;
+		}
+			var allA=document.getElementsByTagName("a");
+			for(var i=0;i<allA.length;i++){
+				allA[i].onclick=delA;
+			}
+		
+		// 添加员工
+		var addEmpButton=document.getElementById("addEmpButton");
+		addEmpButton.onclick=function(){
+			var name=document.getElementById("empName").value;
+			var email=document.getElementById("email").value;
+			var salary=document.getElementById("salary").value;
+			var tr=document.createElement("tr");
+			tr.innerHTML="<td>"+name+"</td>"+
+			             "<td>"+email+"</td>"+
+																"<td>"+salary+"</td>"+
+																"<td><a href='javascript:;'>delete</a></td>";
+				var a=tr.getElementsByTagName("a")[0];
+				a.onclick=delA;
+				var emploveTable=document.getElementById("emploveTable");
+				var tbody=emploveTable.getElementsByTagName("tbody")[0];
+				tbody.appendChild(tr);
+		};
+	</script>
+</html>
