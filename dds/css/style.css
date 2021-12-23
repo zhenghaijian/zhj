@@ -30,27 +30,32 @@ ul{
     right: 0;
     width: 700px;
     height: 400px;
-    background: #fff;
+    background: rgba(255,255,255,0.3);
 }
+/* 结束菜单 */
 #end{
     display: none;
 }
-h2{
-    margin-top: 50px;
-    font-size: 50px;
-    text-align: center;
-}
+/* 开始结束按钮 */
 #btn,#btn1{
     font-size: 30px;
+    display: block;
     border: 5px solid #0ad845;
     border-radius: 20px;
     cursor: pointer;
-    width: 250px;
+    padding: 0 20px;
     height: 50px;
     line-height: 40px;
-    margin-top: 100px;
-    margin-left: 220px;
+    margin: 200px auto 0;
     text-align: center;
+}
+#btn1{
+    margin-top: 100px;
+}
+p{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 100px;
 }
 /* 小盒子样式 */
 li {
