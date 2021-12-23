@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    height: 100%;
+    overflow: hidden;
+}
+/* 大盒子样式 */
+ul{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 700px;
+    height: 400px;
+    align-content: space-between;
+    border: 2px solid yellowgreen;
+}
+/* 开始菜单 */
+#start,#end{
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    width: 700px;
+    height: 400px;
+    background: #fff;
+}
+#end{
+    display: none;
+}
+h2{
+    margin-top: 50px;
+    font-size: 50px;
+    text-align: center;
+}
+#btn,#btn1{
+    font-size: 30px;
+    border: 5px solid #0ad845;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 250px;
+    height: 50px;
+    line-height: 40px;
+    margin-top: 100px;
+    margin-left: 220px;
+    text-align: center;
+}
+/* 小盒子样式 */
+li {
+    float: left;
+    width: 200px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #67d0b4;
+    box-shadow: 0 0 50px #706565 inset;
+    list-style: none;
+}
+/* 地鼠盒子样式 */
+.div {
+    position: relative;
+    margin-top: -20px;
+    margin-left: 50px;
+    width: 100px;
+    height: 140px;
+    border-radius: 50%/40%;
+    background: url(../images/3.png);
+    display: none;
+    z-index: 999;
+}
+/* 地鼠盒子动画效果 */
+@keyframes move {
+    40%{margin-top: -40px;
+        opacity: 1;
+    }
+    80% {
+        margin-top: -10px;
+        opacity: 0;
+    }
+    100%{
+        margin-top: -20px;
+        opacity: 0;
+    }
+}
+/* √盒子样式 */
+i{
+    font-style: normal;
+    line-height: 70px;
+    font-size: 40px;
+    color: #0ad845;
+    position: absolute;
+    left: 35px;
+    top: 40px;
+    display: none;
+}
+/* 分数盒子样式 */
+#box{
+    position: absolute;
+    top: -120px;
+    height: 40px;
+    width: 100%;
+    line-height: 40px;
+    font-size: 40px;
+    text-align: center;
+    display: none;
+}
+/* 分数值盒子 */
+#span,#span1{
+    display: inline-block;
+    height: 40px;
+    border: 0;
+    font-size: 40px;
+    width: 100px;
+}
+/* 锤子 */
+#box2{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotate(40deg);
+    display: none;
+}
